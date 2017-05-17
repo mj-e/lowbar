@@ -5,7 +5,6 @@ _.identity = function (x) {
 };
 
 _.first = function (arr, n) {
-
   if (!Array.isArray(arr) && typeof arr !== 'string') return undefined;
   if (typeof arr === 'string') arr = arr.split('');
   if (arguments.length < 2) {
@@ -16,7 +15,6 @@ _.first = function (arr, n) {
 };
 
 _.last = function (arr, n) {
-
   if (!Array.isArray(arr) && typeof arr !== 'string') return undefined;
   if (typeof arr === 'string') arr = arr.split('');
   if (arguments.length < 2) {
@@ -27,7 +25,6 @@ _.last = function (arr, n) {
 };
 
 _.each = function (list, func) {
-
   if (Array.isArray(list)) {
     list.map(function (x, i) {
       func(x, i, list);
@@ -43,7 +40,6 @@ _.each = function (list, func) {
 };
 
 _.indexOf = function (array, value, isSorted) {
-
   if (!Array.isArray(array)) return undefined;
 
   if (isSorted === false || arguments.length < 3) {
@@ -78,7 +74,6 @@ _.indexOf = function (array, value, isSorted) {
 };
 
 _.filter = function (list, func) {
-
   if (typeof list === 'string') return list.split('');
   if (list !== null && typeof list === 'object') list = Object.values(list);
   if (!Array.isArray(list) || func === undefined) return [];
@@ -91,7 +86,6 @@ _.filter = function (list, func) {
 };
 
 _.reject = function (list, func) {
-
   if (typeof list === 'string') return [];
   if (list !== null && typeof list === 'object') list = Object.values(list);
   if (!Array.isArray(list) || func === undefined) return [];
@@ -104,7 +98,6 @@ _.reject = function (list, func) {
 };
 
 _.uniq = function (array) {
-
   if (!Array.isArray(array)) return [];
   return array.filter(function (item, pos) {
     return array.indexOf(item) == pos;
@@ -112,7 +105,6 @@ _.uniq = function (array) {
 };
 
 _.map = function (list, func) {
-
   if (list === undefined) return [];
   if (typeof list === 'string') return list.split('');
   if (list !== null && typeof list === 'object') list = Object.values(list);
@@ -126,7 +118,6 @@ _.map = function (list, func) {
 };
 
 _.pluck = function (list, prop) {
-
   if (!Array.isArray(list)) return [];
   if (typeof list === 'string') return [undefined];
   if (list !== null && typeof list === 'object') list = Object.values(list);
@@ -135,7 +126,6 @@ _.pluck = function (list, prop) {
 };
 
 _.reduce = function (list, func, start) {
-
   if (arguments.length < 2) return undefined;
   if (typeof list === 'string') list = list.split('');
   if (arguments.length > 2) {
@@ -148,7 +138,6 @@ _.reduce = function (list, func, start) {
 };
 
 _.contains = function (list, value, fromIndex) {
-
   if (arguments.length < 2) return false;
   if (typeof list === 'string') list = list.split('');
   if (list !== null && typeof list === 'object') list = Object.values(list);
@@ -162,7 +151,6 @@ _.contains = function (list, value, fromIndex) {
 };
 
 _.every = function (list, func) {
-
   if (arguments.length < 2) return true;
   if (typeof func !== 'function') return false;
   if (list !== null && typeof list === 'object') list = Object.values(list);
@@ -174,7 +162,6 @@ _.every = function (list, func) {
 };
 
 _.some = function (list, func) {
-
   if (typeof func !== 'function' || arguments.length === 0) return false;
   if (arguments.length === 1) return true;
   if (list !== null && typeof list === 'object') list = Object.values(list);
@@ -186,7 +173,6 @@ _.some = function (list, func) {
 };
 
 _.extend = function (destination) {
-
   var len = arguments.length;
   if (len === 0) return undefined;
   if (destination.length === 0) return destination;
@@ -201,7 +187,6 @@ _.extend = function (destination) {
 };
 
 _.defaults = function (obj) {
-
   if (arguments.length === 0) return undefined;
   if (obj.length === 0) return obj;
   if (typeof obj !== 'object' || Array.isArray(obj)) return obj;
@@ -217,7 +202,6 @@ _.defaults = function (obj) {
 };
 
 _.indexOf = function (array, value, isSorted) {
-
     if (!Array.isArray(array)) return undefined;
 
     if (isSorted === false || arguments.length < 3) {
@@ -284,7 +268,6 @@ _.memoize = function (iteratee, hashFunction) {
 };
 
 _.delay = function (func, wait) {
-
     const inputs = Array.prototype.slice.call(arguments);
 
     return setTimeout(function () {
